@@ -1,7 +1,9 @@
     {% extends 'layout.html' %}
 
     {% block content %}
-        <div class="timeline">
+    <label for=""><input type="text"></label>
+
+        <div class="timeline" style="position: relative;left: 80%;">
         {% if user %}
             <div>
             <form id="twit-form" action="/post" method="post" enctype="multipart/form-data">
@@ -44,6 +46,7 @@
     {% endblock %}
 
     {% block script %}
+
     <script>
         if (document.getElementById('img')) {
         document.getElementById('img').addEventListener('change', function(e) {
